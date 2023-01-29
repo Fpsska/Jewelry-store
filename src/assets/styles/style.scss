@@ -1,0 +1,21 @@
+@import '../libs/normalize.css';
+@import './reset';
+
+/* /. imports */
+
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    color: #303030;
+    background-color: #FFF;
+    font-family: Inter, sans-serif;
+    height: 100%;
+}
+
+// /. general-styles
