@@ -1,6 +1,7 @@
 @import '../libs/normalize.css';
 @import './reset.scss';
 @import './custom.scss';
+@import './media.scss';
 
 /* /. imports */
 
@@ -42,6 +43,8 @@ body {
     }
 
     &__buttons {
+        align-items: center;
+
         :not(:last-child) {
             margin-right: 28px;
         }

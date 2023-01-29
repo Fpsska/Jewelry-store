@@ -1,0 +1,34 @@
+@import './custom.scss';
+
+// /. imports
+
+
+@media screen and (max-width: 1400px) {
+    .header__categories-nav {
+        .categories-nav__list {
+            justify-content: center;
+        }
+    }
+
+    .header__search-form {
+        border-left: none;
+        border-top: 1px solid #F0F0F0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header__categories-nav {
+        padding: 20px 26px;
+
+        .categories-nav__list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .categories-nav__template {
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

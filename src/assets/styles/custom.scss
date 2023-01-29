@@ -10,8 +10,18 @@ $green-color: #43807F;
 
 // /. custum variables
 
+$grid-breakpoints: (
+    init: 0,
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
 $container-max-widths: (
-    sm: 1300px,
+    xs: 1300px,
 );
 
 
