@@ -18,4 +18,10 @@ const offerSlider = new Swiper('.offer__slider', {
     }
 });
 
+const categoriesSlider = new Swiper('.categories__slider', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    loop: true
+});
+
 // /. slider configuration

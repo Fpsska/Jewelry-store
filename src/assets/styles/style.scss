@@ -1,6 +1,7 @@
 @import '../libs/normalize.css';
 @import './reset.scss';
 @import './custom.scss';
+@import './mixins.scss';
 @import './media.scss';
 
 /* /. imports */
@@ -18,6 +19,14 @@ body {
     background-color: $white-color;
     font-family: Inter, sans-serif;
     height: 100%;
+}
+
+.section-title {
+    font-family: 'Prata', sans-serif;
+    font-size: $fz-title;
+    line-height: 40px;
+    color: $dark-color;
+    margin: 0;
 }
 
 // /. general-styles
@@ -208,3 +217,46 @@ body {
 }
 
 // /. offer
+
+.categories {
+    margin-bottom: 120px;
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 200px;
+        height: 260px;
+        overflow: hidden;
+        background-color: $gray-color;
+        position: relative;
+    }
+
+    &__image {
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: $dark-color;
+        padding: 17px 26px;
+        z-index: 1;
+    }
+}
+
+// /. categories
