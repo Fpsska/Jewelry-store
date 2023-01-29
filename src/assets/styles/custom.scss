@@ -1,0 +1,23 @@
+$fz-main: 14px;
+$fz-title: 40px;
+
+$dark-color: #303030;
+$white-color: #FFF;
+$gray-color: #F8F8F8;
+$gold-color: #E1A661;
+$red-color: #E24B33;
+$green-color: #43807F;
+
+// /. custum variables
+
+$container-max-widths: (
+    sm: 1300px,
+);
+
+
+// /. overwrited
+
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+// /. required imports
