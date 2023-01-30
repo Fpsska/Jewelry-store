@@ -10,6 +10,11 @@ $green-color: #43807F;
 
 // /. custum variables
 
+$font-family-base: 'Inter',
+    sans-serif;
+$bs-body-color: $dark-color;
+$bs-body-bg: $white-color;
+
 $grid-breakpoints: (
     init: 0,
     xs: 320px,

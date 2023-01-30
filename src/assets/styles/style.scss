@@ -14,9 +14,6 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
-    color: $dark-color;
-    background-color: $white-color;
-    font-family: Inter, sans-serif;
     height: 100%;
 }
 
@@ -397,3 +394,75 @@ body {
 }
 
 // /. sale
+
+
+.discounts {
+    margin-bottom: 120px;
+}
+
+.discount-card {
+    display: flex;
+    flex: 0 1 420px;
+    height: 290px;
+    overflow: hidden;
+
+    background-color: $gray-color;
+    background-image: url(../images/diamond.svg);
+    background-size: contain;
+    background-position: top 25px left;
+    background-repeat: no-repeat;
+
+    &__description {
+        display: flex;
+        flex: 1 1 auto;
+        padding: 10px 10px 45px 0;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__name {
+        font-size: 20px;
+        line-height: 160%;
+        font-weight: 600;
+        color: $dark-color;
+        text-transform: uppercase;
+        padding-left: 25px;
+        margin-bottom: 30px;
+    }
+
+    &__percent {
+        font-size: 24px;
+        font-weight: 600;
+        color: $white-color;
+        padding: 6px 26px;
+
+        strong {
+            font-size: 36px;
+        }
+    }
+
+    &__percent_green {
+        background-color: $green-color;
+    }
+
+    &__percent_red {
+        background-color: $red-color;
+    }
+
+    &__percent_gold {
+        background-color: $gold-color;
+    }
+
+    &__image {
+        flex: 0 0 180px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            @include image-centered;
+            object-fit: contain;
+        }
+    }
+}
+
+// /. discounts
