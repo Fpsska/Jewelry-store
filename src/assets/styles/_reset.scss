@@ -14,21 +14,24 @@ body a {
     text-decoration: none;
 }
 
-ul,
+body ul,
 li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
     margin: 0;
 }
 
-p {
+
+body p {
     margin: 0;
 }
 

@@ -21,6 +21,73 @@
     }
 }
 
+// /. overwrite default nav styles
+
+.swiper-button-prev.roundish,
+.swiper-button-next.roundish {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev.roundish {
+    &::after {
+        content: url(../images/slider_sale-arrow.svg);
+        transform: rotate(-180deg);
+    }
+}
+
+.swiper-button-prev.roundish.swiper-button-disabled {
+    &::after {
+        content: url(../images/slider_sale-arrow.svg);
+        transform: rotate(-180deg);
+    }
+}
+
+.swiper-button-next.roundish {
+    &::after {
+        content: url(../images/slider_sale-arrow.svg);
+    }
+}
+
+.swiper-button-next.roundish.swiper-button-disabled {
+    &::after {
+        content: url(../images/slider_sale-arrow.svg);
+    }
+}
+
+// /. custom nav with rounded form
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 1px solid $dark-color;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $dark-color;
+}
+
+// /. custom pagination
+
+.sale {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
 .offer__slider {
 
     .swiper-slide {
@@ -30,50 +97,5 @@
     .swiper-button-prev,
     .swiper-button-next {
         top: 45%;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        border: 1px solid $dark-color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .swiper-button-prev {
-        &::after {
-            content: url(../images/slider_sale-arrow.svg);
-            transform: rotate(-180deg);
-        }
-    }
-
-    .swiper-button-prev.swiper-button-disabled {
-        &::after {
-            content: url(../images/slider_sale-arrow.svg);
-            transform: rotate(-180deg);
-        }
-    }
-
-    .swiper-button-next {
-        &::after {
-            content: url(../images/slider_sale-arrow.svg);
-        }
-    }
-
-    .swiper-button-next.swiper-button-disabled {
-        &::after {
-            content: url(../images/slider_sale-arrow.svg);
-        }
-    }
-
-    .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-        background-color: transparent;
-        border: 1px solid $dark-color;
-    }
-
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background-color: $dark-color;
     }
 }

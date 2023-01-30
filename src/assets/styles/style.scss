@@ -260,3 +260,139 @@ body {
 }
 
 // /. categories
+
+.tags-list {
+
+    &__menu {
+        display: flex;
+    }
+
+    &__template {
+        background-color: #F0F0F0;
+        border-radius: 21px;
+        padding: 12px 30px;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__template.active {
+        background-color: $dark-color;
+
+        .tags-list__link {
+            color: $white-color;
+        }
+    }
+
+    &__link {
+        font-size: $fz-main;
+        font-weight: 400;
+        color: $dark-color;
+    }
+}
+
+// /. sale
+
+.sale {
+    margin-bottom: 120px;
+}
+
+.sale-slider {
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 310px;
+        height: 370px;
+        overflow: hidden;
+        border: 1px solid #F0F0F0;
+        padding: 26px 24px;
+    }
+
+    &__preview {
+        position: relative;
+    }
+
+    &__tag {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #5B8A8F;
+        color: $white-color;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__controls {
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            background-color: transparent;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__image {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: auto;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__information {}
+
+    &__doscount {
+        background-color: $red-color;
+        color: $white-color;
+        padding: 4px 8px;
+        border-radius: 15px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__value {
+        font-size: 18px;
+        font-weight: 600;
+        color: $dark-color;
+    }
+
+    &__value_old {
+        font-size: $fz-main;
+        font-weight: 400;
+        color: #8F8F8F;
+        text-decoration: line-through;
+    }
+
+    &__name {
+        font-size: $fz-main;
+        font-weight: 400;
+        color: $dark-color;
+    }
+}

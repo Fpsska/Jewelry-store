@@ -24,4 +24,24 @@ const categoriesSlider = new Swiper('.categories__slider', {
     loop: true
 });
 
+const saleSlider = new Swiper('.sale-slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    modules: [Navigation],
+    navigation: {
+        nextEl: '.swiper-button-next.roundish',
+        prevEl: '.swiper-button-prev.roundish'
+    }
+});
+
+const saleNestedSlider = new Swiper('.sale-slider_nested', {
+    slidesPerView: 1,
+    modules: [Pagination],
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    }
+});
+
 // /. slider configuration
