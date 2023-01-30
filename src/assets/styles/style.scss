@@ -2,7 +2,6 @@
 @import './reset.scss';
 @import './custom.scss';
 @import './mixins.scss';
-@import './media.scss';
 
 /* /. imports */
 
@@ -170,7 +169,7 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
-        height: 100%;
+        height: 560px;
     }
 
     &__text {
@@ -225,7 +224,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        width: 200px;
+        max-width: 200px;
         height: 260px;
         overflow: hidden;
         background-color: $gray-color;
@@ -265,16 +264,14 @@ body {
 
     &__menu {
         display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     &__template {
         background-color: #F0F0F0;
         border-radius: 21px;
         padding: 12px 30px;
-
-        &:not(:last-child) {
-            margin-right: 8px;
-        }
     }
 
     &__template.active {
@@ -304,7 +301,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 310px;
+        max-width: 310px;
         height: 370px;
         overflow: hidden;
         border: 1px solid #F0F0F0;

@@ -32,3 +32,33 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+
+    .sale-slider__slide,
+    .categories__slide {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .offer__slide {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .offer__caption {
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .offer__text {
+        padding: 20px;
+    }
+
+    .offer__image {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -25,6 +25,7 @@
 
 .swiper-button-prev.roundish,
 .swiper-button-next.roundish {
+    flex-shrink: 0;
     width: 54px;
     height: 54px;
     border-radius: 50%;
@@ -89,10 +90,6 @@
 }
 
 .offer__slider {
-
-    .swiper-slide {
-        height: 560px;
-    }
 
     .swiper-button-prev,
     .swiper-button-next {
