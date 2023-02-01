@@ -462,6 +462,7 @@ body {
 
     &__image {
         flex: 0 0 180px;
+        height: 100%;
         overflow: hidden;
         position: relative;
 
@@ -521,7 +522,7 @@ body {
 
     &__title {
         font-size: 16px;
-        line-height: 100%;
+        line-height: 150%;
         font-weight: 500;
         color: $dark-color;
 

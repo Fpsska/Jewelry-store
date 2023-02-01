@@ -16,6 +16,29 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .discount-card {
+        flex-direction: column;
+        min-height: 380px;
+        height: auto;
+        background-position: top 20px center;
+    }
+
+    .discount-card__image {
+        flex: 0 0 220px;
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .discount-card__description {
+        padding: 0;
+    }
+
+    .discount-card__percent {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .header__categories-nav {
         padding: 20px 26px;
@@ -31,17 +54,7 @@
             }
         }
     }
-}
 
-@media screen and (max-width: 767px) {
-
-    .sale-slider__slide,
-    .categories__slide {
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 992px) {
     .offer__slide {
         flex-direction: column;
         align-items: flex-start;
@@ -60,5 +73,13 @@
     .offer__image {
         width: 100%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .sale-slider__slide,
+    .categories__slide {
+        margin: 0 auto;
     }
 }
