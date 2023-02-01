@@ -108,4 +108,34 @@ const saleNestedSlider = new Swiper('.sale-slider_nested', {
     }
 });
 
+const dayProductSlider = new Swiper('.day-product-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    modules: [Navigation],
+    navigation: {
+        nextEl: '.swiper-button-next.roundish',
+        prevEl: '.swiper-button-prev.roundish'
+    }
+});
+
+const dayProductImageSlider = new Swiper('.day-product-image-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    modules: [Navigation],
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    }
+});
+
+const sizePickerSlider = new Swiper('.size-picker-slider', {
+    slidesPerView: 10,
+    spaceBetween: 10
+});
+
+const colorPickerSlider = new Swiper('.color-picker-slider', {
+    slidesPerView: 4,
+    spaceBetween: 10
+});
+
 // /. slider configuration

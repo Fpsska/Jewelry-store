@@ -13,6 +13,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+    z-index: 2;
     overflow: hidden;
     margin-top: 0;
 
@@ -95,4 +96,21 @@
     .swiper-button-next {
         top: 45%;
     }
+}
+
+.day-product-image-slider {
+
+    .swiper-button-next {
+        &::after {
+            content: url(../images/slider_day_image-arrow.svg);
+        }
+    }
+
+    .swiper-button-prev {
+        &::after {
+            content: url(../images/slider_day_image-arrow.svg);
+            transform: rotate(-180deg);
+        }
+    }
+
 }
