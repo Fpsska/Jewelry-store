@@ -163,7 +163,9 @@ body {
 
 .offer {
     margin: 20px 0 120px 0;
+}
 
+.offer-slider {
     &__slide {
         display: flex;
         align-items: center;
@@ -225,7 +227,9 @@ body {
 
 .categories {
     margin-bottom: 120px;
+}
 
+.categories-slider {
     &__slide {
         display: flex;
         flex-direction: column;
@@ -820,6 +824,10 @@ body {
     display: flex;
     flex-direction: column;
 
+    &__button {
+        background-color: transparent;
+    }
+
     svg {
         margin-right: 10px;
     }
@@ -827,6 +835,7 @@ body {
     &__template {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         &:not(:last-child) {
             margin-bottom: 20px;

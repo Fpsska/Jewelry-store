@@ -4,7 +4,7 @@ import '../libs/swiper.scss';
 
 // /. imports
 
-const offerSlider = new Swiper('.offer__slider', {
+const offerSlider = new Swiper('.offer-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
     modules: [Navigation, Pagination],
@@ -18,7 +18,7 @@ const offerSlider = new Swiper('.offer__slider', {
     }
 });
 
-const categoriesSlider = new Swiper('.categories__slider', {
+const categoriesSlider = new Swiper('.categories-slider', {
     slidesPerView: 6,
     spaceBetween: 20,
     loop: true,
