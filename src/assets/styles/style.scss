@@ -234,6 +234,9 @@ body {
             padding-bottom: 22px;
         }
 
+        svg {
+            display: none;
+        }
     }
 
     &__template.active {
