@@ -13,8 +13,8 @@ const offerSlider = new Swiper('.offer-slider', {
         clickable: true
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.swiper-button-next-offer',
+        prevEl: '.swiper-button-prev-offer'
     }
 });
 
@@ -61,11 +61,10 @@ const categoriesSlider = new Swiper('.categories-slider', {
 const saleSlider = new Swiper('.sale-slider', {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: true,
     modules: [Navigation],
     navigation: {
-        nextEl: '.swiper-button-next.roundish',
-        prevEl: '.swiper-button-prev.roundish'
+        nextEl: '.swiper-button-next-category',
+        prevEl: '.swiper-button-prev-category'
     },
     breakpoints: {
         320: {

@@ -1182,9 +1182,9 @@ body {
         overflow: hidden;
         clip: rect(0 0 0 0);
 
-        &:hover~.star-rating__label svg {
-            fill: rgba($color: $gold-color, $alpha: 1);
-        }
+        // &:hover~.star-rating__label svg {
+        //     fill: rgba($color: $gold-color, $alpha: 1);
+        // }
 
         &:checked~.star-rating__label svg {
             fill: rgba($color: $gold-color, $alpha: 1);
