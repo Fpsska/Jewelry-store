@@ -44,9 +44,45 @@ body {
         justify-content: space-between;
     }
 
+    &__city-selection {
+        svg {
+            order: -1;
+            transition: all .3s ease-in-out;
+            opacity: 1;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .dropdown {
+            &:active {
+                border-color: transparent;
+            }
+
+            &:hover~svg {
+                opacity: 0.5;
+            }
+        }
+    }
+
     &__phone {
         svg {
             margin-right: 10px;
+            transition: all .3s ease-in-out;
+            opacity: 1;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+                opacity: 0.5;
+            }
         }
     }
 
@@ -54,17 +90,66 @@ body {
         span {
             color: $dark-color;
         }
+
+        a {
+            transition: all .3s ease-in-out;
+            opacity: 1;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
     }
 
     &__buttons {
         align-items: center;
+    }
 
-        :not(:last-child) {
+    &__button {
+
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+        padding: .2rem;
+
+        &:not(:last-child) {
             margin-right: 28px;
         }
 
-        button {
-            background-color: transparent;
+        svg {
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            background-color: $gray-color;
+        }
+
+        &:active {
+            background-color: #E8E7E7;
+        }
+    }
+
+    &__button_favourite {
+        svg {
+            fill: #303030;
+        }
+    }
+
+    &__button_rating {
+        svg {
+            stroke: #303030;
+        }
+    }
+
+    &__button_basket {
+
+        svg {
+            stroke: #303030;
+        }
+
+        &:active {
+            svg rect {
+                fill: none;
+            }
         }
     }
 
@@ -120,6 +205,11 @@ body {
         color: $dark-color;
         text-transform: uppercase;
         opacity: 1;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     &__link.active {
@@ -248,12 +338,18 @@ body {
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -40%) scale(1);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: translate(-50%, -40%) scale(1.05);
+        }
 
         img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+
         }
     }
 
@@ -281,7 +377,19 @@ body {
     &__template {
         background-color: #F0F0F0;
         border-radius: 21px;
-        padding: 12px 30px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: #DDDDDD;
+        }
+
+        &:active {
+            background-color: $dark-color;
+
+            .tags-list__link {
+                color: $white-color;
+            }
+        }
     }
 
     &__template.active {
@@ -293,9 +401,12 @@ body {
     }
 
     &__link {
+        display: inline-block;
+        padding: 12px 30px;
         font-size: $fz-main;
         font-weight: 400;
         color: $dark-color;
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -343,12 +454,31 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
 
-        button {
-            background-color: transparent;
+    &__button {
+        background-color: transparent;
 
-            &:not(:last-child) {
-                margin-bottom: 10px;
+        svg {
+            transition: all .3s ease-in-out;
+            fill: #C9C9C9;
+        }
+
+        &:hover {
+            svg {
+                fill: #979797
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__button_add {
+        &:active {
+            svg {
+                fill: #E24B33
             }
         }
     }
@@ -365,8 +495,6 @@ body {
             height: 100%;
         }
     }
-
-    &__information {}
 
     &__price {
         margin-bottom: 16px;
@@ -621,12 +749,27 @@ body {
         text-align: center;
         border: 1px solid $dark-color;
         margin-bottom: 20px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: #505050;
+        }
+
+        &:active {
+            background-color: #000;
+            color: $white-color;
+        }
     }
 
     &__button_quick {
         background-color: transparent;
         color: $dark-color;
         margin: 0;
+
+        &:hover {
+            background-color: $dark-color;
+            color: $white-color;
+        }
     }
 
     &__color-picker {
@@ -750,6 +893,17 @@ body {
         font-size: $fz-main;
         font-weight: 400;
         text-align: center;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            border-color: #DADADA;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: $dark-color;
+            color: $white-color;
+        }
     }
 
     &__slide.active {
@@ -823,6 +977,22 @@ body {
         display: flex;
         align-items: center;
         margin-bottom: 14px;
+    }
+
+    &__tooltip-btn {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+
+        svg {
+            fill: #F0F0F0;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                fill: #D3D3D3;
+                cursor: pointer;
+            }
+        }
     }
 
     &__label {
@@ -962,5 +1132,6 @@ body {
         }
     }
 }
+
 
 // /. popular

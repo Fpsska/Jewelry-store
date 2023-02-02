@@ -16,9 +16,11 @@
     z-index: 2;
     overflow: hidden;
     margin-top: 0;
+    transition: all .3s ease-in-out;
 
     &::after {
         font-size: 0;
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -35,12 +37,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        background-color: #F5F5F5;
+    }
 }
 
 .swiper-button-prev.roundish {
     &::after {
         content: url(../images/slider_sale-arrow.svg);
         transform: rotate(-180deg);
+    }
+
+    &:active {
+        &::after {
+            transform: rotate(-180deg) translateX(5px);
+        }
     }
 }
 
@@ -54,6 +66,12 @@
 .swiper-button-next.roundish {
     &::after {
         content: url(../images/slider_sale-arrow.svg);
+    }
+
+    &:active {
+        &::after {
+            transform: translateX(5px);
+        }
     }
 }
 

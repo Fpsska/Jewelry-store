@@ -29,6 +29,15 @@ $container-max-widths: (
     xs: 1300px,
 );
 
+.form-select {
+    padding-right: 0 !important;
+    border-color: transparent !important;
+
+    // background-position: right 1.75rem center;
+    &:focus {
+        box-shadow: none !important;
+    }
+}
 
 // /. overwrited
 
