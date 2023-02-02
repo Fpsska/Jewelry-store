@@ -557,18 +557,37 @@ body {
 
     &__slide {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
     &__preview {
         flex: 0 0 550px;
+        height: 100%;
         overflow: hidden;
+        margin-right: 100px;
     }
 
     &__body {
         flex: 1 1 auto;
         overflow: hidden;
+    }
+
+    &__rating {
+        display: flex;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+
+    &__star-rating {
+        margin-right: 10px;
+    }
+
+    &__rating-count {
+        font-size: $fz-main;
+        line-height: 100%;
+        font-weight: 400;
+        color: $dark-color;
     }
 
     &__description {
@@ -887,6 +906,64 @@ body {
         font-size: 18px;
         color: $dark-color;
         margin-right: 10px;
+    }
+}
+
+.star-rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    &__caption {
+        width: 1px;
+        height: 1px;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        position: absolute;
+    }
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        cursor: pointer;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+
+        &:hover~.star-rating__label svg {
+            fill: rgba($color: $gold-color, $alpha: 1);
+        }
+
+        &:checked~.star-rating__label svg {
+            fill: rgba($color: $gold-color, $alpha: 1);
+        }
+
+        &:disabled~.star-rating__label {
+            pointer-events: none;
+        }
+    }
+
+    &__label {
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 0 5px;
+        }
+
+        svg {
+            fill: none;
+            transition: all .3s linear;
+        }
     }
 }
 
