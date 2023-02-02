@@ -130,7 +130,33 @@ const dayProductImageSlider = new Swiper('.day-product-image-slider', {
 
 const sizePickerSlider = new Swiper('.size-picker-slider', {
     slidesPerView: 10,
-    spaceBetween: 10
+    spaceBetween: 10,
+    breakpoints: {
+        320: {
+            slidesPerView: 4
+        },
+        425: {
+            slidesPerView: 6
+        },
+        560: {
+            slidesPerView: 6
+        },
+        600: {
+            slidesPerView: 7
+        },
+        768: {
+            slidesPerView: 9
+        },
+        992: {
+            slidesPerView: 5
+        },
+        1024: {
+            slidesPerView: 6
+        },
+        1300: {
+            slidesPerView: 9
+        }
+    }
 });
 
 const colorPickerSlider = new Swiper('.color-picker-slider', {

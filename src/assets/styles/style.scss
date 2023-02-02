@@ -563,7 +563,6 @@ body {
 
     &__preview {
         flex: 0 0 550px;
-        height: 100%;
         overflow: hidden;
         margin-right: 100px;
     }
@@ -605,8 +604,6 @@ body {
         justify-content: space-between;
     }
 
-    &__actions {}
-
     &__buttons {
         flex: 1 1 auto;
         display: flex;
@@ -629,6 +626,7 @@ body {
     &__button_quick {
         background-color: transparent;
         color: $dark-color;
+        margin: 0;
     }
 
     &__color-picker {
@@ -675,10 +673,7 @@ body {
 }
 
 .day-product-image-slider {
-    max-width: 100%;
     position: relative;
-
-    &__slide {}
 
     &__tags {
         margin: 2.5px;
@@ -714,6 +709,7 @@ body {
 
     &__image {
         height: 550px;
+        width: 100%;
         overflow: hidden;
     }
 }
