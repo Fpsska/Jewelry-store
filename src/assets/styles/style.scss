@@ -179,20 +179,15 @@ body {
         position: relative;
         display: flex;
         align-items: center;
+    }
 
-        >svg {
-            transition: all .3s ease-in-out;
-        }
+    .select-menu__button {
+        transition: all .3s ease-in-out;
+        background-color: transparent;
+    }
 
-        &:hover {
-            .sub-select-menu__list {
-                display: flex;
-            }
-
-            >svg {
-                transform: rotateX(180deg);
-            }
-        }
+    .select-menu__button.active {
+        transform: rotateX(180deg);
     }
 
     &__link {
@@ -213,6 +208,10 @@ body {
         position: absolute;
         top: 15px;
         left: 0;
+    }
+
+    &__list.active {
+        display: flex;
     }
 
     &__template {
@@ -252,6 +251,7 @@ body {
         margin-right: 10px;
     }
 }
+
 
 .logo {
     flex: 0 0 183px;
