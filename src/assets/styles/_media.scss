@@ -50,6 +50,15 @@
         display: inline-block;
         margin-bottom: 5px;
     }
+
+    .size-picker__tooltip-btn {
+
+        &::before,
+        &::after {
+            left: 5%;
+            transform: translateX(0%) translateY(var(--translateY, 0)) scale(var(--scale));
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
