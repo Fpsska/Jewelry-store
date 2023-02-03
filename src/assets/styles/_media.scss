@@ -120,22 +120,8 @@
         height: auto;
     }
 
-    .day-product-slider__slide {
-        flex-direction: column;
-    }
-
-    .day-product-slider__preview {
-        flex: 0 1 auto;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
     .day-product-image-slider__image {
         text-align: center;
-    }
-
-    .day-product-slider__body {
-        width: 100%;
     }
 
     .day-product-slider__actions {
@@ -150,7 +136,9 @@
     .categories-slider__slide {
         margin: 0 auto;
     }
+}
 
+@media screen and (max-width: 475px) {
     .day-product-image-slider__image {
         height: 350px;
     }

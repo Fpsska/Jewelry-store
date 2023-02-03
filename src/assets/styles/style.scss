@@ -763,20 +763,7 @@ body {
 .day-product-slider {
 
     &__slide {
-        display: flex;
         align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    &__preview {
-        flex: 0 0 550px;
-        overflow: hidden;
-        margin-right: 100px;
-    }
-
-    &__body {
-        flex: 1 1 auto;
-        overflow: hidden;
     }
 
     &__rating {
@@ -898,6 +885,7 @@ body {
     position: relative;
 
     &__tags {
+        z-index: 2;
         margin: 2.5px;
         position: absolute;
         top: 0;
@@ -933,6 +921,12 @@ body {
         height: 550px;
         width: 100%;
         overflow: hidden;
+        position: relative;
+
+        img {
+            @include image-centered;
+            height: 90%;
+        }
     }
 }
 
