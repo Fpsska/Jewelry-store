@@ -6,5 +6,6 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 import './assets/js/slider.js';
 import './assets/js/selectionMenu.js';
+import './assets/js/reset.js';
 
 // /. imports
