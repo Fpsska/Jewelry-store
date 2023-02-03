@@ -1059,9 +1059,55 @@ body {
     }
 
     &__tooltip-btn {
+        position: relative;
         background-color: transparent;
         display: flex;
         align-items: center;
+
+        &::before,
+        &::after {
+            --scale: 0;
+            --arrow-size: 8px;
+            --tooltip-color: #FFF;
+
+            z-index: 2;
+            position: absolute;
+            top: -.55rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(var(--translateY,
+                        0)) scale(var(--scale));
+            transform-origin: bottom center;
+            transition: all .3s ease-in-out;
+        }
+
+        &::before {
+            // tooltip container
+            --translateY: calc(-100% - var(--arrow-size));
+
+            content: attr(data-message);
+            text-align: start;
+            padding: 24px;
+            background-color: var(--tooltip-color);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        &::after {
+            --translateY: calc(-1 * var(--arrow-size));
+            // tooltip arrow
+
+            content: '';
+            border: var(--arrow-size) solid transparent;
+            border-top-color: var(--tooltip-color);
+            transform-origin: top center;
+        }
+
+        &:hover {
+
+            &::before,
+            &::after {
+                --scale: 1
+            }
+        }
 
         svg {
             fill: #F0F0F0;
