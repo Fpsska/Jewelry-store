@@ -112,8 +112,8 @@ const dayProductSlider = new Swiper('.day-product-slider', {
     spaceBetween: 20,
     modules: [Navigation],
     navigation: {
-        nextEl: '.swiper-button-next.roundish',
-        prevEl: '.swiper-button-prev.roundish'
+        nextEl: '.swiper-button-next-dayproduct.roundish',
+        prevEl: '.swiper-button-prev-dayproduct.roundish'
     }
 });
 
@@ -122,8 +122,8 @@ const dayProductImageSlider = new Swiper('.day-product-image-slider', {
     spaceBetween: 20,
     modules: [Navigation],
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.swiper-button-next-nestedimg',
+        prevEl: '.swiper-button-prev-nestedimg'
     }
 });
 

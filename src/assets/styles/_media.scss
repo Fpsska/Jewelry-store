@@ -58,6 +58,14 @@
             left: 5%;
             transform: translateX(0%) translateY(var(--translateY, 0)) scale(var(--scale));
         }
+
+        &::before {
+            transform-origin: bottom left;
+        }
+
+        &::after {
+            transform-origin: top left;
+        }
     }
 }
 

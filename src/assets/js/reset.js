@@ -1,7 +1,10 @@
 const headerAuthLinks = document.querySelectorAll('.header__account a');
 const categoryLinks = document.querySelectorAll('.categories-nav__link');
 const categoriesSliderLinks = document.querySelectorAll('.categories-slider a');
-const offerSliderLinks = document.querySelectorAll('.offer-slider__button');
+const offerSliderLinks = document.querySelectorAll([
+    '.offer-slider__button',
+    '.offer-slider__image'
+]);
 const tagLinks = document.querySelectorAll('.tags-list__link');
 const discountLinks = document.querySelectorAll('.discount-card');
 const articleCardLinks = document.querySelectorAll('.article-card__title a');
