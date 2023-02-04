@@ -1026,10 +1026,14 @@ body {
     }
 
     &__tooltip-btn {
-        position: relative;
-        background-color: transparent;
         display: flex;
         align-items: center;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        background-color: #F0F0F0;
+        border-radius: 50%;
+        animation: pulse 4s linear infinite;
 
         &::before,
         &::after {
@@ -1052,6 +1056,7 @@ body {
             --translateY: calc(-100% - var(--arrow-size));
 
             content: attr(data-message);
+            min-width: 200px;
             text-align: start;
             padding: 24px;
             background-color: var(--tooltip-color);
@@ -1070,6 +1075,8 @@ body {
 
         &:hover {
 
+            animation: none;
+
             &::before,
             &::after {
                 --scale: 1
@@ -1077,6 +1084,7 @@ body {
         }
 
         svg {
+            z-index: 1;
             fill: #F0F0F0;
             transition: all .3s ease-in-out;
 
@@ -1086,6 +1094,25 @@ body {
             }
         }
     }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0px 0 rgba(#F0F0F0, 0.5);
+        }
+
+        40% {
+            box-shadow: 0 0 0px 2px rgba($dark-color, 0.3);
+        }
+
+        80% {
+            box-shadow: 0px 0px 0px 3.5px rgba(#F0F0F0, 0.1);
+        }
+
+        100% {
+            box-shadow: 0px 0px 0px 5px rgba(#F0F0F0, 0);
+        }
+    }
+
 
     &__label {
         font-size: 12px;
