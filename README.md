@@ -5,4 +5,4 @@
 
 #
 
-### `Watch demo` _[Krait-Task](https://fpsska.github.io/Krait-Task/)_
+### `Watch demo` _[Jewelry-store](https://fpsska.github.io/Jewelry-store/)_
